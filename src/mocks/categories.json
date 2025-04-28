@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Shoes"
+    },
+    {
+        "id": 2,
+        "name": "Upper Body"
+    },
+    {
+        "id": 3,
+        "name": "Lower Body"
+    },
+    {
+        "id": 4,
+        "name": "Epic"
+    },
+    {
+        "id": 5,
+        "name": "Hat"
+    },
+    {
+        "id": 6,
+        "name": "Legendary"
+    },
+    {
+        "id": 7,
+        "name": "Mythic"
+    },
+    {
+        "id": 8,
+        "name": "Rare"
+    },
+    {
+        "id": 9,
+        "name": "Basic"
+    },
+    {
+        "id": 10,
+        "name": "Deluxe"
+    },
+    {
+        "id": 11,
+        "name": "Premium"
+    },
+    {
+        "id": 12,
+        "name": "Colorful"
+    },
+    {
+        "id": 13,
+        "name": "Dark"
+    },
+    {
+        "id": 14,
+        "name": "Light"
+    },
+    {
+        "id": 15,
+        "name": "Halloween"
+    },
+    {
+        "id": 16,
+        "name": "Accessory"
+    }
+]

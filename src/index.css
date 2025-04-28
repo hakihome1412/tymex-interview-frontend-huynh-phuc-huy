@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .bg-banner {
+    background-image: url("/src/assets/bg-banner.jpg");
+  }
+
+  .bg-footer-banner {
+    background-image: url("/src/assets/bg-footer-banner.jpg");
+  }
+
+  .bg-banner-product {
+    background-image: url("/src/assets/banner-product.png");
+  }
+
+  .bg-paint-streak {
+    background-image: url("/src/assets/paint-streak.png");
+  }
+
+  .content-above-mask {
+    @apply relative z-10;
+  }
+}
