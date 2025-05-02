@@ -1,54 +1,84 @@
-# React + TypeScript + Vite
+# Test Frontend TymeX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tech Stack
+- React
+- Vite
+- Ant Design
+- TailwindCSS
+- React Query
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Project Structure
+```
+.
+├── src/
+│   ├── components/        # Reusable components
+│   ├── pages/             # Page components
+│   ├── assets/            # Static assets
+│   ├── services/          # API services
+│   ├── hooks/             # Custom React hooks
+│   ├── constants/         # Constants and configuration
+│   ├── types/             # TypeScript type definitions
+│   ├── utils/             # Utility functions
+│   ├── mocks/             # Mock data for testing/development
+│   ├── App.tsx            # Main application component
+│   └── main.tsx           # Application entry point
+├── public/                # Public assets
+├── dist/                  # Build output
+└── ...                    # Config files
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Installation
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+**Using npm:**
+```bash
+npm install
 ```
+
+**Using yarn:**
+```bash
+yarn install
+```
+
+**Using bun:**
+```bash
+bun install
+```
+
+### Development
+
+**Using npm:**
+```bash
+npm run dev
+```
+
+**Using yarn:**
+```bash
+yarn dev
+```
+
+**Using bun:**
+```bash
+bun run dev
+```
+
+### Build
+
+**Using npm:**
+```bash
+npm run build
+```
+
+**Using yarn:**
+```bash
+yarn build
+```
+
+**Using bun:**
+```bash
+bun run build
+```
+
+## Website
+<!-- Add your website URL here -->
