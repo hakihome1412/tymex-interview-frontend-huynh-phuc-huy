@@ -7,5 +7,6 @@ export default function useProductsBanner() {
   return useQuery<Product[]>({
     queryKey: ["productsBanner"],
     queryFn: getProductsBanner,
+    refetchInterval: 60000,
   });
 }

@@ -52,5 +52,6 @@ export default function useProducts(limit: number = LIMIT_DEFAULT, filters: Prod
       return allPages.length + 1;
     },
     initialPageParam: 1,
+    refetchInterval: 60000,
   });
 }
