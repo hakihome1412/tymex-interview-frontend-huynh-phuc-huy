@@ -1,5 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { getProductsBanner, Product } from "@/services/products";
+
+import { getProductsBanner } from "@/services/products";
+import { Product } from "@/types";
 
 export default function useProductsBanner() {
   return useQuery<Product[]>({

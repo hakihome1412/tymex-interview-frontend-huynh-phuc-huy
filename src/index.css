@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* Font Face Declarations */
+@font-face {
+  font-family: "Drone";
+  src: url("/src/assets/fonts/dronerangerpro_bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer utilities {
   .bg-banner {
     background-image: url("/src/assets/bg-banner.jpg");
@@ -17,7 +26,236 @@
     background-image: url("/src/assets/paint-streak.png");
   }
 
+  .bg-footer-content {
+    background-image: url("/src/assets/footer-content.png");
+  }
+
   .content-above-mask {
     @apply relative z-10;
+  }
+}
+
+@theme {
+  --breakpoint-3xl: 100rem;
+
+  --breakpoint-4xl: 120rem;
+}
+
+@theme inline {
+  /* Star animations */
+  --twinkle-keyframes: {
+    0%,
+    100% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    50% {
+      opacity: 0.9;
+      transform: scale(1);
+    }
+  }
+
+  --animation-twinkle-3: twinkle 3s ease-in-out infinite;
+  --animation-twinkle-4: twinkle 4s ease-in-out infinite;
+  --animation-twinkle-5: twinkle 5s ease-in-out infinite;
+  --animation-twinkle-6: twinkle 6s ease-in-out infinite;
+  --animation-twinkle-7: twinkle 7s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+
+.font-drone {
+  font-family: "Drone", sans-serif;
+}
+
+.font-drone-bold {
+  font-family: "DroneRangerPro-Bold", sans-serif;
+}
+
+/* Star colors */
+.star-white {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.star-blue {
+  background-color: rgba(120, 120, 255, 0.9);
+}
+
+.star-purple {
+  background-color: rgba(180, 120, 255, 0.9);
+}
+
+/* Star sizes */
+.sparkle-size-1 {
+  width: 1px;
+  height: 1px;
+}
+
+.sparkle-size-2 {
+  width: 2px;
+  height: 2px;
+}
+
+.sparkle-size-3 {
+  width: 3px;
+  height: 3px;
+}
+
+.sparkle-size-4 {
+  width: 4px;
+  height: 4px;
+}
+
+.sparkle-size-5 {
+  width: 5px;
+  height: 5px;
+}
+
+/* Animation delays */
+.animation-delay-0 {
+  animation-delay: 0s;
+}
+.animation-delay-1 {
+  animation-delay: 1s;
+}
+.animation-delay-2 {
+  animation-delay: 2s;
+}
+.animation-delay-3 {
+  animation-delay: 3s;
+}
+.animation-delay-4 {
+  animation-delay: 4s;
+}
+.animation-delay-5 {
+  animation-delay: 5s;
+}
+.animation-delay-6 {
+  animation-delay: 6s;
+}
+.animation-delay-7 {
+  animation-delay: 7s;
+}
+.animation-delay-8 {
+  animation-delay: 8s;
+}
+.animation-delay-9 {
+  animation-delay: 9s;
+}
+.animation-delay-10 {
+  animation-delay: 10s;
+}
+
+/* Animations */
+.animate-twinkle-3 {
+  animation: twinkle 3s ease-in-out infinite;
+}
+.animate-twinkle-4 {
+  animation: twinkle 4s ease-in-out infinite;
+}
+.animate-twinkle-5 {
+  animation: twinkle 5s ease-in-out infinite;
+}
+.animate-twinkle-6 {
+  animation: twinkle 6s ease-in-out infinite;
+}
+.animate-twinkle-7 {
+  animation: twinkle 7s ease-in-out infinite;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.ant-form-item-label {
+  label {
+    color: #89888b !important;
+  }
+}
+
+.input-project {
+  input {
+    padding-left: 6px !important;
+    &::placeholder {
+      color: #89888b !important;
+    }
+  }
+
+  &::placeholder {
+    color: #89888b !important;
+  }
+}
+
+.select-project {
+  .ant-select-selector {
+    background-color: transparent !important;
+    border: 1px solid #89888b !important;
+    border-radius: 4px !important;
+    height: 44px !important;
+    color: #fff !important;
+  }
+  .ant-select-arrow {
+    color: #d6d6d6 !important;
+    margin-top: -2px !important;
+  }
+
+  .ant-select-clear {
+    margin-top: -2px !important;
+  }
+}
+
+.slider-project {
+  .ant-slider-handle {
+    width: 16px !important;
+    height: 16px !important;
+    border: 1px solid #ffffff !important;
+    inset-block-start: 0 !important;
+    border-radius: 50% !important;
+    &::after {
+      box-shadow: 0px 0px 16px 8px #da40a387 !important;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        #ffffff 0%,
+        rgba(255, 84, 238, 0.294) 100%
+      ) !important;
+
+      width: 16px !important;
+      height: 16px !important;
+    }
+  }
+}
+
+.text-bg-primary {
+  background: linear-gradient(91.47deg, #da458f -6%, #da34dd 113.05%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    border-radius: 4px;
+    background: linear-gradient(91.47deg, #da458f -6%, #da34dd 113.05%);
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

@@ -3,6 +3,7 @@ import { Result } from "antd";
 export default function OurTeams() {
   return (
     <Result
+      className="relative z-10"
       status="403"
       title={<h1 className="text-white">403</h1>}
       subTitle={

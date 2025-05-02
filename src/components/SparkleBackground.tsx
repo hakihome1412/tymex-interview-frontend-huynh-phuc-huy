@@ -18,9 +18,9 @@ export default function SparkleBackground() {
 
   useEffect(() => {
     // Generate random sparkles
-    const newSparkles = Array.from({ length: 150 }, (_, i) => {
+    const newSparkles = Array.from({ length: 300 }, (_, i) => {
       // Determine if this will be a larger glowing star (less frequent)
-      const isGlowingStar = Math.random() < 0.05;
+      const isGlowingStar = Math.random() < 0.25;
 
       // Colors are blue, white, and purple as requested
       const colors = ["star-white", "star-blue", "star-purple"];
@@ -44,7 +44,7 @@ export default function SparkleBackground() {
   }, []);
 
   return (
-    <div className="absolute top-0 left-0 w-full h-screen overflow-hidden bg-gradient-to-br from-black via-[#0a0520] to-[#120a30]">
+    <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-gradient-to-br from-black via-[#0a0520] to-[#120a30]">
       {/* Very subtle corner gradients */}
       <div className="absolute top-0 right-0 w-1/4 h-1/4 bg-[#1a0a40]/20 blur-[120px] rounded-full"></div>
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-[#1a0a40]/10 blur-[120px] rounded-full"></div>
@@ -58,7 +58,7 @@ export default function SparkleBackground() {
             sparkle.color,
             `animate-twinkle-${sparkle.duration}`,
             `animation-delay-${sparkle.delay}`,
-            `size-${sparkle.size}`
+            `sparkle-size-${sparkle.size}`
           )}
           style={{
             top: sparkle.top,
